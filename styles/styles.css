@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --violet-hsl: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --font-family-headings: 'Poppins', sans-serif;;
+    --font-family-body: 'Open Sans', sans-serif;; 
+
+}
+
+body {
+    background-color: var(--violet-hsl);
+    background-image: url(/assets/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    margin-left: 5em;
+    margin-top: 3em;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+    gap: 5em;
+}
+
+.container__title{
+    margin-bottom: 0.4em;
+    font-family: var(--font-family-headings);
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+}
+
+.container__text{
+    color: white;
+    font-family: var(--font-family-body);
+    font-size: 20px;
+    margin-bottom: 2em;
+    font-weight: 400;
+}
+
+.container__button{
+    font-family: var(--font-family-body);
+    background-color: white;
+    color: var(--violet-hsl);
+    text-decoration: none;
+    border: 15px solid white;
+    border-radius: 20px;
+    border-width: 1em;
+    font-weight: 600;
+    box-shadow: 5px 5px 20px #00030c;
+}
+
+
+.container__button:hover{
+    background-color: var(--soft-magenta);
+    color: var(--violet-hsl);
+    border-color: var(--soft-magenta);
+}
+
+section{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin: 0 80px 80px 0;
+}
+
+.media-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+}
+
+.media-icon:hover{
+    background-color: var(--soft-magenta);
+    border: 2px solid var(--soft-magenta);
+}
+
+@media screen and (max-width: 768px){
+    
+    body{
+        background-image: url(/assets/bg-mobile.svg);
+ 
+    }
+
+    header{
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
+    .container__img{
+        width: 320px;
+    }
+
+    section{
+        margin-bottom: 10px;
+        margin-top: 50px;
+        margin-right: 110px;
+    }
+
+ 
+}
